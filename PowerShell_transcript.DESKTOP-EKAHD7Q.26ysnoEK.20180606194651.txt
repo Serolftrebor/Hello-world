@@ -1,0 +1,161 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180606194651
+Username: DESKTOP-EKAHD7Q\Dad
+RunAs User: DESKTOP-EKAHD7Q\Dad
+Configuration Name: 
+Machine: DESKTOP-EKAHD7Q (Microsoft Windows NT 10.0.17134.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe
+Process ID: 18456
+PSVersion: 5.1.17134.48
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17134.48
+BuildVersion: 10.0.17134.48
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\trebo\OneDrive\Documents\PowerShell_transcript.DESKTOP-EKAHD7Q.26ysnoEK.20180606194651.txt
+PS C:\WINDOWS\system32> cd c:\
+PS C:\> dir
+
+
+    Directory: C:\
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        9/23/2017   2:01 AM                Apps
+d-----        9/23/2017   3:16 AM                Dell
+d-----        9/22/2017   7:32 AM                Drivers
+d-----        1/14/2018  10:27 PM                Intel
+d-----         6/6/2018   7:41 PM                mytest
+d-----        4/11/2018   4:38 PM                PerfLogs
+d-r---        5/29/2018   9:06 PM                Program Files
+d-r---        5/19/2018   7:04 PM                Program Files (x86)
+d-----        5/24/2018  12:30 PM                trebor
+d-r---        5/16/2018   6:27 PM                Users
+d-----        5/16/2018   6:41 PM                Windows
+
+
+PS C:\> md mytest
+md : An item with the specified name C:\mytest already exists.
+At line:1 char:1
++ md mytest
++ ~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (C:\mytest:String) [New-Item], IOException
+    + FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+md : An item with the specified name C:\mytest already exists.
+At line:1 char:1
++ md mytest
++ ~~~~~~~~~
+    + CategoryInfo          : ResourceExists: (C:\mytest:String) [New-Item], IOException
+    + FullyQualifiedErrorId : DirectoryExist,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\> dir m*
+
+
+    Directory: C:\
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----         6/6/2018   7:41 PM                mytest
+
+
+PS C:\> set-location $pshome
+PS C:\Windows\System32\WindowsPowerShell\v1.0> typeperf "\memory\available bytes"
+
+"(PDH-CSV 4.0)","\\DESKTOP-EKAHD7Q\memory\available bytes"
+"06/06/2018 19:48:13.051","12631871488.000000"
+"06/06/2018 19:48:14.051","12632178688.000000"
+"06/06/2018 19:48:15.052","12633047040.000000"
+"06/06/2018 19:48:16.052","12632596480.000000"
+"06/06/2018 19:48:17.052","12631224320.000000"
+"06/06/2018 19:48:18.053","12631187456.000000"
+"06/06/2018 19:48:19.053","12630634496.000000"
+"06/06/2018 19:48:20.053","12630384640.000000"
+PS C:\Windows\System32\WindowsPowerShell\v1.0> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Windows\System32\WindowsPowerShell\v1.0> bcdedit
+
+Windows Boot Manager
+--------------------
+identifier              {bootmgr}
+device                  partition=\Device\HarddiskVolume1
+path                    \EFI\Microsoft\Boot\bootmgfw.efi
+description             Windows Boot Manager
+locale                  en-US
+inherit                 {globalsettings}
+default                 {current}
+resumeobject            {3b6006d8-57f9-11e8-aa4b-d46a6a95fd1c}
+displayorder            {current}
+toolsdisplayorder       {memdiag}
+timeout                 30
+
+Windows Boot Loader
+-------------------
+identifier              {current}
+device                  partition=C:
+path                    \WINDOWS\system32\winload.efi
+description             Windows 10
+locale                  en-US
+inherit                 {bootloadersettings}
+recoverysequence        {d60b749e-5970-11e8-9855-8c0657a79b98}
+displaymessageoverride  Recovery
+recoveryenabled         Yes
+isolatedcontext         Yes
+allowedinmemorysettings 0x15000075
+osdevice                partition=C:
+systemroot              \WINDOWS
+resumeobject            {3b6006d8-57f9-11e8-aa4b-d46a6a95fd1c}
+nx                      OptIn
+bootmenupolicy          Standard
+PS C:\Windows\System32\WindowsPowerShell\v1.0> set-loction c:\mytest
+set-loction : The term 'set-loction' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ set-loction c:\mytest
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (set-loction:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+set-loction : The term 'set-loction' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path
+was included, verify that the path is correct and try again.
+At line:1 char:1
++ set-loction c:\mytest
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (set-loction:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0> set-location c:\mytest
+PS C:\mytest> fsutil file createnew mytestfile.txt 1000
+Error:  The file exists.
+PS C:\mytest> get-childitem
+
+
+    Directory: C:\mytest
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----         6/6/2018   7:41 PM           1000 mytestfile.txt
+
+
+PS C:\mytest> Get-Date
+
+Wednesday, June 6, 2018 7:49:57 PM
+
+
+PS C:\mytest> get-command -name get-alias
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Get-Alias                                          3.1.0.0    Microsoft.PowerShell.Utility
+
+
+PS C:\mytest> stop-transcript
+**********************
+Windows PowerShell transcript end
+End time: 20180606195024
+**********************
