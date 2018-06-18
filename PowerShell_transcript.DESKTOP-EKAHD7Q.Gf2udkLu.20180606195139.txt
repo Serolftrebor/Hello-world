@@ -1,0 +1,1694 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20180606195139
+Username: DESKTOP-EKAHD7Q\Dad
+RunAs User: DESKTOP-EKAHD7Q\Dad
+Configuration Name: 
+Machine: DESKTOP-EKAHD7Q (Microsoft Windows NT 10.0.17134.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe
+Process ID: 10112
+PSVersion: 5.1.17134.48
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17134.48
+BuildVersion: 10.0.17134.48
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\Users\trebo\OneDrive\Documents\PowerShell_transcript.DESKTOP-EKAHD7Q.Gf2udkLu.20180606195139.txt
+PS C:\WINDOWS\system32> get-help
+
+TOPIC
+    Windows PowerShell Help System
+
+SHORT DESCRIPTION
+    Displays help about Windows PowerShell cmdlets and concepts. 
+
+LONG DESCRIPTION
+    Windows PowerShell Help describes Windows PowerShell cmdlets,
+    functions, scripts, and modules, and explains concepts, including
+    the elements of the Windows PowerShell language.
+
+    Windows PowerShell does not include help files, but you can read the
+    help topics online, or use the Update-Help cmdlet to download help files
+    to your computer and then use the Get-Help cmdlet to display the help
+    topics at the command line.
+
+    You can also use the Update-Help cmdlet to download updated help files
+    as they are released so that your local help content is never obsolete. 
+
+    Without help files, Get-Help displays auto-generated help for cmdlets, 
+    functions, and scripts.
+
+
+  ONLINE HELP    
+    You can find help for Windows PowerShell online in the TechNet Library
+    beginning at http://go.microsoft.com/fwlink/?LinkID=108518. 
+
+    To open online help for any cmdlet or function, type:
+
+        Get-Help <cmdlet-name> -Online    
+
+  UPDATE-HELP
+    To download and install help files on your computer:
+
+       1. Start Windows PowerShell with the "Run as administrator" option.
+       2. Type:
+
+          Update-Help
+
+    After the help files are installed, you can use the Get-Help cmdlet to
+    display the help topics. You can also use the Update-Help cmdlet to
+    download updated help files so that your local help files are always
+    up-to-date.
+    
+    For more information about the Update-Help cmdlet, type:
+
+       Get-Help Update-Help -Online
+
+    or go to: http://go.microsoft.com/fwlink/?LinkID=210614
+
+
+  GET-HELP
+    The Get-Help cmdlet displays help at the command line from content in
+    help files on your computer. Without help files, Get-Help displays basic
+    help about cmdlets and functions. You can also use Get-Help to display
+    online help for cmdlets and functions.
+
+    To get help for a cmdlet, type:
+
+        Get-Help <cmdlet-name>
+    
+    To get online help, type:
+   
+        Get-Help <cmdlet-name> -Online    
+
+    The titles of conceptual topics begin with "About_".
+    To get help for a concept or language element, type:
+
+        Get-Help About_<topic-name>
+
+    To search for a word or phrase in all help files, type:
+
+        Get-Help <search-term>
+
+    For more information about the Get-Help cmdlet, type:
+
+        Get-Help Get-Help -Online
+
+    or go to: http://go.microsoft.com/fwlink/?LinkID=113316
+
+
+  EXAMPLES:
+      Save-Help              : Download help files from the Internet and saves
+                               them on a file share.
+      Update-Help            : Downloads and installs help files from the
+                               Internet or a file share.
+      Get-Help Get-Process   : Displays help about the Get-Process cmdlet.   
+      Get-Help Get-Process -Online
+                             : Opens online help for the Get-Process cmdlet.                            
+      Help Get-Process       : Displays help about Get-Process one page at a time.
+      Get-Process -?         : Displays help about the Get-Process cmdlet.      
+      Get-Help About_Modules : Displays help about Windows PowerShell modules.
+      Get-Help remoting      : Searches the help topics for the word "remoting."
+
+  SEE ALSO:
+      about_Updatable_Help
+      Get-Help
+      Save-Help
+      Update-Help
+PS C:\WINDOWS\system32> get-help get-help
+
+NAME
+    Get-Help
+
+SYNOPSIS
+    Displays information about Windows PowerShell commands and concepts.
+
+
+SYNTAX
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] -Detailed [-Functionality <String[]>] [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] -Examples [-Functionality <String[]>] [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Full] [-Functionality <String[]>] [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Functionality <String[]>] -Online [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Functionality <String[]>] -Parameter <String> [-Path <String>] [-Role
+    <String[]>] [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Functionality <String[]>] [-Path <String>] [-Role <String[]>] -ShowWindow
+    [<CommonParameters>]
+
+
+DESCRIPTION
+    The Get-Help cmdlet displays information about Windows PowerShell concepts and commands, including cmdlets, functions, CIM commands, workflows, providers, aliases
+    and scripts.
+
+    To get help for a Windows PowerShell command, type `Get-Help` followed by the command name, such as: `Get-Help Get-Process`. To get a list of all help topics on
+    your system, type `Get-Help *`. You can display the whole help topic or use the parameters of the Get-Help cmdlet to get selected parts of the topic, such as the
+    syntax, parameters, or examples.
+
+    Conceptual help topics in Windows PowerShell begin with "about_", such as "about_Comparison_Operators". To see all "about_" topics, type `Get-Help about_*`. To see
+    a particular topic, type `Get-Help about_<topic-name>`, such as `Get-Help about_Comparison_Operators`.
+
+    To get help for a Windows PowerShell provider, type `Get-Help` followed by the provider name. For example, to get help for the Certificate provider, type `Get-Help
+    Certificate`.
+
+    In addition to `Get-Help`, you can also type `help` or `man`, which displays one screen of text at a time, or `<cmdlet-name> -?`, which is identical to Get-Help but
+    works only for commands. Get-Help gets the help content that it displays from help files on your computer. Without the help files, Get-Help displays only basic
+    information about commands. Some Windows PowerShell modules come with help files. However, starting in Windows PowerShell 3.0, the modules that come with the
+    Windows operating system do not include help files. To download or update the help files for a module in Windows PowerShell 3.0, use the Update-Help cmdlet.
+
+    You can also view the help topics for Windows PowerShell online in the TechNet Library. To get the online version of a help topic, use the Online parameter, such
+    as: `Get-Help Get-Process -Online`. To read all of the help topics, see Scripting with Windows PowerShellhttp://go.microsoft.com/fwlink/?LinkID=107116
+    (http://go.microsoft.com/fwlink/?LinkID=107116) in the TechNet library.
+
+    If you type `Get-Help` followed by the exact name of a help topic, or by a word unique to a help topic, Get-Help displays the topic contents. If you enter a word or
+    word pattern that appears in several help topic titles, Get-Help displays a list of the matching titles. If you enter a word that does not appear in any help topic
+    titles, Get-Help displays a list of topics that include that word in their contents. Get-Help can get help topics for all supported languages and locales. Get-Help
+    first looks for help files in the locale set for Windows, then in the parent locale, such as "pt" for "pt-BR", and then in a fallback locale. Beginning in Windows
+    PowerShell 3.0, if Get-Help does not find help in the fallback locale, it looks for help topics in English, "en-US", before it returns an error message or
+    displaying auto-generated help.
+
+    For information about the symbols that Get-Help displays in the command syntax diagram, see about_Command_Syntax. For information about parameter attributes, such
+    as Required and Position , see about_Parameters. TROUBLESHOOTING NOTE : In Windows PowerShell 3.0 and Windows PowerShell 4.0, Get-Help cannot find About topics in
+    modules unless the module is imported into the current session. This is a known issue. To get About topics in a module, import the module, either by using the
+    Import-Module cmdlet or by running a cmdlet in the module.
+
+
+RELATED LINKS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821483
+    Updatable Help Status Table (http://go.microsoft.com/fwlink/?LinkID=270007) http://go.microsoft.com/fwlink/?LinkID=270007
+    about_Command_Syntax
+    Get-Command
+
+REMARKS
+    To see the examples, type: "get-help Get-Help -examples".
+    For more information, type: "get-help Get-Help -detailed".
+    For technical information, type: "get-help Get-Help -full".
+    For online help, type: "get-help Get-Help -online"
+
+
+PS C:\WINDOWS\system32> get-help get-help -deatailed
+>> TerminatingError(Get-Help): "A parameter cannot be found that matches parameter name 'deatailed'."
+Get-Help : A parameter cannot be found that matches parameter name 'deatailed'.
+At line:1 char:19
++ get-help get-help -deatailed
++                   ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+Get-Help : A parameter cannot be found that matches parameter name 'deatailed'.
+At line:1 char:19
++ get-help get-help -deatailed
++                   ~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Help], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetHelpCommand
+
+PS C:\WINDOWS\system32> get-help get-help -detailed
+
+NAME
+    Get-Help
+
+SYNOPSIS
+    Displays information about Windows PowerShell commands and concepts.
+
+
+SYNTAX
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] -Detailed [-Functionality <String[]>] [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] -Examples [-Functionality <String[]>] [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Full] [-Functionality <String[]>] [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Functionality <String[]>] -Online [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Functionality <String[]>] -Parameter <String> [-Path <String>] [-Role
+    <String[]>] [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Functionality <String[]>] [-Path <String>] [-Role <String[]>] -ShowWindow
+    [<CommonParameters>]
+
+
+DESCRIPTION
+    The Get-Help cmdlet displays information about Windows PowerShell concepts and commands, including cmdlets, functions, CIM commands, workflows, providers, aliases
+    and scripts.
+
+    To get help for a Windows PowerShell command, type `Get-Help` followed by the command name, such as: `Get-Help Get-Process`. To get a list of all help topics on
+    your system, type `Get-Help *`. You can display the whole help topic or use the parameters of the Get-Help cmdlet to get selected parts of the topic, such as the
+    syntax, parameters, or examples.
+
+    Conceptual help topics in Windows PowerShell begin with "about_", such as "about_Comparison_Operators". To see all "about_" topics, type `Get-Help about_*`. To see
+    a particular topic, type `Get-Help about_<topic-name>`, such as `Get-Help about_Comparison_Operators`.
+
+    To get help for a Windows PowerShell provider, type `Get-Help` followed by the provider name. For example, to get help for the Certificate provider, type `Get-Help
+    Certificate`.
+
+    In addition to `Get-Help`, you can also type `help` or `man`, which displays one screen of text at a time, or `<cmdlet-name> -?`, which is identical to Get-Help but
+    works only for commands. Get-Help gets the help content that it displays from help files on your computer. Without the help files, Get-Help displays only basic
+    information about commands. Some Windows PowerShell modules come with help files. However, starting in Windows PowerShell 3.0, the modules that come with the
+    Windows operating system do not include help files. To download or update the help files for a module in Windows PowerShell 3.0, use the Update-Help cmdlet.
+
+    You can also view the help topics for Windows PowerShell online in the TechNet Library. To get the online version of a help topic, use the Online parameter, such
+    as: `Get-Help Get-Process -Online`. To read all of the help topics, see Scripting with Windows PowerShellhttp://go.microsoft.com/fwlink/?LinkID=107116
+    (http://go.microsoft.com/fwlink/?LinkID=107116) in the TechNet library.
+
+    If you type `Get-Help` followed by the exact name of a help topic, or by a word unique to a help topic, Get-Help displays the topic contents. If you enter a word or
+    word pattern that appears in several help topic titles, Get-Help displays a list of the matching titles. If you enter a word that does not appear in any help topic
+    titles, Get-Help displays a list of topics that include that word in their contents. Get-Help can get help topics for all supported languages and locales. Get-Help
+    first looks for help files in the locale set for Windows, then in the parent locale, such as "pt" for "pt-BR", and then in a fallback locale. Beginning in Windows
+    PowerShell 3.0, if Get-Help does not find help in the fallback locale, it looks for help topics in English, "en-US", before it returns an error message or
+    displaying auto-generated help.
+
+    For information about the symbols that Get-Help displays in the command syntax diagram, see about_Command_Syntax. For information about parameter attributes, such
+    as Required and Position , see about_Parameters. TROUBLESHOOTING NOTE : In Windows PowerShell 3.0 and Windows PowerShell 4.0, Get-Help cannot find About topics in
+    modules unless the module is imported into the current session. This is a known issue. To get About topics in a module, import the module, either by using the
+    Import-Module cmdlet or by running a cmdlet in the module.
+
+
+PARAMETERS
+    -Category <String[]>
+        Displays help only for items in the specified category and their aliases. The acceptable values for this parameter are:
+
+        - Alias
+
+        - Cmdlet
+
+        - Provider
+
+        - General
+
+        - FAQ
+
+        - Glossary
+
+        - HelpFile
+
+        - ScriptCommand
+
+        - Function
+
+        - Filter
+
+        - ExternalScript
+
+        - All
+
+        - DefaultHelp
+
+        - Workflow
+
+        - DscResource
+
+        - Class
+
+        - Configuration
+
+
+        Conceptual topics are in the HelpFile category.
+
+
+    -Component <String[]>
+        Displays commands with the specified component value, such as "Exchange." Enter a component name. Wildcard characters are permitted.
+
+        This parameter has no effect on displays of conceptual ("About_") help.
+
+    -Detailed [<SwitchParameter>]
+        Adds parameter descriptions and examples to the basic help display.
+
+        This parameter is effective only when help files are for the command are installed on the computer. It has no effect on displays of conceptual ("About_") help.
+
+    -Examples [<SwitchParameter>]
+        Displays only the name, synopsis, and examples. To display only the examples, type `(Get-Help <cmdlet-name>).Examples`.
+
+        This parameter is effective only when help files are for the command are installed on the computer. It has no effect on displays of conceptual ("About_") help.
+
+    -Full [<SwitchParameter>]
+        Displays the whole help topic for a cmdlet. This includes parameter descriptions and attributes, examples, input and output object types, and additional notes.
+
+        This parameter is effective only when help files are for the command are installed on the computer. It has no effect on displays of conceptual ("About_") help.
+
+    -Functionality <String[]>
+        Displays help for items with the specified functionality. Enter the functionality. Wildcard characters are permitted.
+
+        This parameter has no effect on displays of conceptual ("About_") help.
+
+    -Name <String>
+        Gets help about the specified command or concept. Enter the name of a cmdlet, function, provider, script, or workflow, such as `Get-Member`, a conceptual topic
+        name, such as `about_Objects`, or an alias, such as `ls`. Wildcard characters are permitted in cmdlet and provider names, but you cannot use wildcard characters
+        to find the names of function help and script help topics.
+
+        To get help for a script that is not located in a path that is listed in the Path environment variable, type the path and file name of the script.
+
+        If you enter the exact name of a help topic, Get-Help displays the topic contents. If you enter a word or word pattern that appears in several help topic
+        titles, Get-Help displays a list of the matching titles. If you enter a word that does not match any help topic titles, Get-Help displays a list of topics that
+        include that word in their contents.
+
+        The names of conceptual topics, such as `about_Objects`, must be entered in English, even in non-English versions of Windows PowerShell.
+
+    -Online [<SwitchParameter>]
+        Displays the online version of a help topic in the default Internet browser. This parameter is valid only for cmdlet, function, workflow and script help topics.
+        You cannot use the Online parameter in Get-Help commands in a remote session.
+
+        For information about supporting this feature in help topics that you write, see about_Comment_Based_Help (http://go.microsoft.com/fwlink/?LinkID=144309), and
+        Supporting Online Help (http://go.microsoft.com/fwlink/?LinkID=242132), and How to Write Cmdlet Helphttp://go.microsoft.com/fwlink/?LinkID=123415
+        (http://go.microsoft.com/fwlink/?LinkID=123415) in the Microsoft Developer Network MSDN library.
+
+    -Parameter <String>
+        Displays only the detailed descriptions of the specified parameters. Wildcards are permitted.
+
+        This parameter has no effect on displays of conceptual ("About_") help.
+
+    -Path <String>
+        Gets help that explains how the cmdlet works in the specified provider path. Enter a Windows PowerShell provider path.
+
+        This parameter gets a customized version of a cmdlet help topic that explains how the cmdlet works in the specified Windows PowerShell provider path. This
+        parameter is effective only for help about a provider cmdlet and only when the provider includes a custom version of the provider cmdlet help topic in its help
+        file. To use this parameter, install the help file for the module that includes the provider.
+
+        To see the custom cmdlet help for a provider path, go to the provider path location and enter a Get-Help command or, from any path location, use the Path
+        parameter of Get-Help to specify the provider path. You can also find custom cmdlet help online in the provider help section of the help topics. For example,
+        you can find help for the New-Item cmdlet in the Wsman:\*\ClientCertificate path (http://go.microsoft.com/fwlink/?LinkID=158676).
+
+        For more information about Windows PowerShell providers, see about_Providers (http://go.microsoft.com/fwlink/?LinkID=113250) in the TechNet library.
+
+    -Role <String[]>
+        Displays help customized for the specified user role. Enter a role. Wildcard characters are permitted.
+
+        Enter the role that the user plays in an organization. Some cmdlets display different text in their help files based on the value of this parameter. This
+        parameter has no effect on help for the core cmdlets.
+
+    -ShowWindow [<SwitchParameter>]
+        Displays the help topic in a window for easier reading. The window includes a Find search feature and a Settings box that lets you set options for the display.
+        These include options to display only selected sections of a help topic.
+
+        The ShowWindow parameter supports help topics for commands, which include cmdlets, functions, CIM commands, workflows, and scripts, and conceptual About topics.
+        It does not support provider help.
+
+        This parameter was introduced in Windows PowerShell 3.0.
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+    Example 1: Display help about the help system
+
+    PS C:\>Get-Help
+
+    This command displays help about the Windows PowerShell help system.
+    Example 2: Display available help topics
+
+    PS C:\>Get-Help *
+
+    This command displays a list of the available help topics.
+    Example 3: Display basic information about a cmdlet
+
+    PS C:\>Get-Help Get-Alias
+    PS C:\> Help Get-Alias
+    PS C:\> Get-Alias -?
+
+    These commands display basic information about the Get-Alias cmdlet. The Get-Help and ? commands display the information on a single page. The Help command displays
+    the information one page at a time.
+    Example 4: Display a list of conceptual topics
+
+    PS C:\>Get-Help about_*
+
+    This command displays a list of the conceptual topics included in Windows PowerShell help. All of these topics begin with the characters about_. To display a
+    particular help file, type get-help <topic-name>, for example, `Get-Help about_Signing`.
+
+    This command displays the conceptual topics only when the help files for those topics are installed on the computer. For information about downloading and
+    installing help files in Windows PowerShell 3.0, see Update-Help.
+    Example 5: Download and install help files
+
+    The first command uses the **Get-Help** cmdlet to get help for the Get-Command cmdlet. Without help files, **Get-Help** display the cmdlet name, syntax and alias of
+    **Get-Command**, and prompts you to use the **Update-Help** cmdlet to get the newest help files.
+    PS C:\>Get-Help Get-Command
+    NAME
+        Get-Command
+
+
+    SYNTAX
+
+     Get-Command [[-Name] <string[]>] [-CommandType {Alias | Function | Filter | Cmdlet | ExternalScript | Application |
+
+        Script | All}] [[-ArgumentList] <Object[]>] [-Module <string[]>] [-Syntax] [-TotalCount <int>] [<CommonParameters>]
+
+
+        Get-Command [-Noun <string[]>] [-Verb <string[]>] [[-ArgumentList] <Object[]>] [-Module <string[]>] [-Syntax]
+
+        [-TotalCount <int>] [<CommonParameters>]
+
+
+
+    ALIASES
+        gcm
+
+
+    REMARKS
+        Get-Help cannot find the help files for this cmdlet on this computer.
+        It is displaying only partial help. To download and install help files
+        for this cmdlet, use **Update-Help**.
+
+    The second command runs the **Update-Help** cmdlet without parameters. This command downloads help files from the Internet for all of the modules in the current
+    session and installs them on the local computer.This command works only when the local computer is connected to the Internet. If your computer is not connected to
+    the Internet, you might be able to install help files from a network share. For more information, see Save-Help.
+    PS C:\>Update-Help
+
+    Now that the help files are downloaded, we can repeat the first command in the sequence. This command gets help for the **Get-Command** cmdlet. The cmdlet now gets
+    more extensive help for **Get-Command** and you can use the *Detailed*, *Full*, *Example*, and *Parameter* parameters of **Get-Help** to customize the displays.You
+    can use the **Get-Help** cmdlet as soon as the **Update-Help** command finishes. You do not have to restart Windows PowerShell.
+    PS C:\>Get-Help Get-Command
+
+    This example shows how to download and install new or updated help files for a module. It uses features that were introduced in Windows PowerShell 3.0.
+
+    The example compares the help that Get-Help displays for commands when you do not have help files installed on your computer and when you do have help files. You
+    can use the same command sequence to update the help files on your computer so that your local help content is never obsolete.
+
+    To download and install the help files for the commands that come with Windows PowerShell, and for any modules in the $pshome\Modules directory, open Windows
+    PowerShell by using the Run as administrator option. If you are not a member of the Administrators group on the computer, you cannot download help for these
+    modules. However, you can use the Online parameter to open the online version of help for a command, and you can read the help for Windows PowerShell in the TechNet
+    library starting at Scripting with Windows PowerShellhttp://go.microsoft.com/fwlink/?LinkID=107116 (http://go.microsoft.com/fwlink/?LinkID=107116).
+    Example 6: Display detailed help
+
+    PS C:\>Get-Help ls -Detailed
+
+    This command displays detailed help for the Get-ChildItem cmdlet by specifying one of its aliases, ls. The Detailed parameter of Get-Help gets the detailed view of
+    the help topic, which includes parameter descriptions and examples. To see the complete help topic for a cmdlet, use the Full parameter.
+
+    The Full and Detailed parameters are effective only when help files for the command are installed on the computer.
+    Example 7: Display full information for a cmdlet
+
+    PS C:\>Get-Help Format-Table -Full
+
+    This command uses the Full parameter of Get-Help to display the full view help for the Format-Table cmdlet. The full view of help includes parameter descriptions,
+    examples, and a table of technical details about the parameters.
+
+    The Full parameter is effective only when help files for the command are installed on the computer.
+    Example 8: Display examples for a cmdlet
+
+    PS C:\>Get-Help Start-Service -Examples
+
+    This command displays examples of using the Start-Service cmdlet. It uses the Examples parameter of Get-Help to display only the Examples section of the cmdlet help
+    topics.
+
+    The Examples parameter is effective only when help files for the command are installed on the computer.
+    Example 9: Display parameter help
+
+    PS C:\>Get-Help Format-List -Parameter GroupBy
+
+    This command uses the Parameter parameter of Get-Help to display a detailed description of the GroupBy parameter of the Format-List cmdlet. For detailed
+    descriptions of all parameters of the Format-List cmdlet, type `Get-Help Format-List -Parameter *`.
+    Example 10: Search for a word in cmdlet help
+
+    PS C:\>Get-Help Add-Member -Full | Out-String -Stream | Select-String -Pattern Clixml
+
+    This example shows how to search for a word in particular cmdlet help topic. This command searches for the word Clixml in the full version of the help topic for the
+    Add-Member cmdlet.
+
+    Because the Get-Help cmdlet generates a MamlCommandHelpInfo object, not a string, you have to use a cmdlet that transforms the help topic content into a string,
+    such as Out-String or Out-File.
+    Example 11: Display online version of help
+
+    PS C:\>Get-Help Get-Member -Online
+
+    This command displays the online version of the help topic for the Get-Member cmdlet.
+    Example 12: Display a list of topics that include a word
+
+    PS C:\>Get-Help remoting
+
+    This command displays a list of topics that include the word remoting.
+
+    When you enter a word that does not appear in any topic title, Get-Help displays a list of topics that include that word.
+    Example 13: Display provider specific help
+
+    The first command uses the *Path* parameter of **Get-Help** to specify the provider path. This command can be entered at any path location.
+    PS C:\>Get-Help Get-Item -Path SQLSERVER:\DataCollection
+
+    NAME
+
+        Get-Item
+
+
+    SYNOPSIS
+
+        Gets a collection of Server objects for the local computer and any computers
+
+        to which you have made a SQL Server PowerShell connection.
+
+        ...
+
+    The second command uses the Set-Location cmdlet (alias = "cd") to navigate to the provider path. From that location, even without the *Path* parameter, the
+    **Get-Help** command gets the provider-specific help for the **Get-Item** cmdlet.
+    PS C:\>cd SQLSERVER:\DataCollection
+    SQLSERVER:\DataCollection> Get-Help Get-Item
+
+    NAME
+
+        Get-Item
+
+
+    SYNOPSIS
+
+        Gets a collection of Server objects for the local computer and any computers
+
+        to which you have made a SQL Server PowerShell connection.
+
+        ...
+
+
+    The third command shows that a **Get-Help** command in a file system path, and without the *Path* parameter, gets the standard help for the **Get-Item** cmdlet.
+    PS C:\>Get-Item
+
+    NAME
+
+        Get-Item
+
+
+    SYNOPSIS
+
+        Gets the item at the specified location.
+        ...
+
+    This example shows how to get help that explains how to use the Get-Item cmdlet in the DataCollection node of the Windows PowerShellSQL Server provider. The example
+    shows two ways of getting the provider-specific help for Get-Item .
+
+    You can also get provider-specific help for cmdlets online in the section that describes the provider. For example, for provider-specific online help for the
+    New-Item cmdlet in each WSMan provider path, see New-Item for ClientCertificatehttp://go.microsoft.com/fwlink/?LinkID=158676 in the TechNet library.
+    Example 14: Display help for a script
+
+    PS C:\>Get-Help C:\PS-Test\MyScript.ps1
+
+    This command gets help for the MyScript.ps1 script. For information about how to write help for your functions and scripts, see about_Comment_Based_Help.
+REMARKS
+    To see the examples, type: "get-help Get-Help -examples".
+    For more information, type: "get-help Get-Help -detailed".
+    For technical information, type: "get-help Get-Help -full".
+    For online help, type: "get-help Get-Help -online"
+
+
+PS C:\WINDOWS\system32> get-help get-help -full
+
+NAME
+    Get-Help
+
+SYNOPSIS
+    Displays information about Windows PowerShell commands and concepts.
+
+
+SYNTAX
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] -Detailed [-Functionality <String[]>] [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] -Examples [-Functionality <String[]>] [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Full] [-Functionality <String[]>] [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Functionality <String[]>] -Online [-Path <String>] [-Role <String[]>]
+    [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Functionality <String[]>] -Parameter <String> [-Path <String>] [-Role
+    <String[]>] [<CommonParameters>]
+
+    Get-Help [[-Name] <String>] [-Category {Alias | Cmdlet | Provider | General | FAQ | Glossary | HelpFile | ScriptCommand | Function | Filter | ExternalScript | All |
+    DefaultHelp | Workflow | DscResource | Class | Configuration}] [-Component <String[]>] [-Functionality <String[]>] [-Path <String>] [-Role <String[]>] -ShowWindow
+    [<CommonParameters>]
+
+
+DESCRIPTION
+    The Get-Help cmdlet displays information about Windows PowerShell concepts and commands, including cmdlets, functions, CIM commands, workflows, providers, aliases
+    and scripts.
+
+    To get help for a Windows PowerShell command, type `Get-Help` followed by the command name, such as: `Get-Help Get-Process`. To get a list of all help topics on
+    your system, type `Get-Help *`. You can display the whole help topic or use the parameters of the Get-Help cmdlet to get selected parts of the topic, such as the
+    syntax, parameters, or examples.
+
+    Conceptual help topics in Windows PowerShell begin with "about_", such as "about_Comparison_Operators". To see all "about_" topics, type `Get-Help about_*`. To see
+    a particular topic, type `Get-Help about_<topic-name>`, such as `Get-Help about_Comparison_Operators`.
+
+    To get help for a Windows PowerShell provider, type `Get-Help` followed by the provider name. For example, to get help for the Certificate provider, type `Get-Help
+    Certificate`.
+
+    In addition to `Get-Help`, you can also type `help` or `man`, which displays one screen of text at a time, or `<cmdlet-name> -?`, which is identical to Get-Help but
+    works only for commands. Get-Help gets the help content that it displays from help files on your computer. Without the help files, Get-Help displays only basic
+    information about commands. Some Windows PowerShell modules come with help files. However, starting in Windows PowerShell 3.0, the modules that come with the
+    Windows operating system do not include help files. To download or update the help files for a module in Windows PowerShell 3.0, use the Update-Help cmdlet.
+
+    You can also view the help topics for Windows PowerShell online in the TechNet Library. To get the online version of a help topic, use the Online parameter, such
+    as: `Get-Help Get-Process -Online`. To read all of the help topics, see Scripting with Windows PowerShellhttp://go.microsoft.com/fwlink/?LinkID=107116
+    (http://go.microsoft.com/fwlink/?LinkID=107116) in the TechNet library.
+
+    If you type `Get-Help` followed by the exact name of a help topic, or by a word unique to a help topic, Get-Help displays the topic contents. If you enter a word or
+    word pattern that appears in several help topic titles, Get-Help displays a list of the matching titles. If you enter a word that does not appear in any help topic
+    titles, Get-Help displays a list of topics that include that word in their contents. Get-Help can get help topics for all supported languages and locales. Get-Help
+    first looks for help files in the locale set for Windows, then in the parent locale, such as "pt" for "pt-BR", and then in a fallback locale. Beginning in Windows
+    PowerShell 3.0, if Get-Help does not find help in the fallback locale, it looks for help topics in English, "en-US", before it returns an error message or
+    displaying auto-generated help.
+
+    For information about the symbols that Get-Help displays in the command syntax diagram, see about_Command_Syntax. For information about parameter attributes, such
+    as Required and Position , see about_Parameters. TROUBLESHOOTING NOTE : In Windows PowerShell 3.0 and Windows PowerShell 4.0, Get-Help cannot find About topics in
+    modules unless the module is imported into the current session. This is a known issue. To get About topics in a module, import the module, either by using the
+    Import-Module cmdlet or by running a cmdlet in the module.
+
+
+PARAMETERS
+    -Category <String[]>
+        Displays help only for items in the specified category and their aliases. The acceptable values for this parameter are:
+
+        - Alias
+
+        - Cmdlet
+
+        - Provider
+
+        - General
+
+        - FAQ
+
+        - Glossary
+
+        - HelpFile
+
+        - ScriptCommand
+
+        - Function
+
+        - Filter
+
+        - ExternalScript
+
+        - All
+
+        - DefaultHelp
+
+        - Workflow
+
+        - DscResource
+
+        - Class
+
+        - Configuration
+
+
+        Conceptual topics are in the HelpFile category.
+
+
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+
+    -Component <String[]>
+        Displays commands with the specified component value, such as "Exchange." Enter a component name. Wildcard characters are permitted.
+
+        This parameter has no effect on displays of conceptual ("About_") help.
+
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+
+    -Detailed [<SwitchParameter>]
+        Adds parameter descriptions and examples to the basic help display.
+
+        This parameter is effective only when help files are for the command are installed on the computer. It has no effect on displays of conceptual ("About_") help.
+
+        Required?                    true
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+
+    -Examples [<SwitchParameter>]
+        Displays only the name, synopsis, and examples. To display only the examples, type `(Get-Help <cmdlet-name>).Examples`.
+
+        This parameter is effective only when help files are for the command are installed on the computer. It has no effect on displays of conceptual ("About_") help.
+
+        Required?                    true
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+
+    -Full [<SwitchParameter>]
+        Displays the whole help topic for a cmdlet. This includes parameter descriptions and attributes, examples, input and output object types, and additional notes.
+
+        This parameter is effective only when help files are for the command are installed on the computer. It has no effect on displays of conceptual ("About_") help.
+
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+
+    -Functionality <String[]>
+        Displays help for items with the specified functionality. Enter the functionality. Wildcard characters are permitted.
+
+        This parameter has no effect on displays of conceptual ("About_") help.
+
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+
+    -Name <String>
+        Gets help about the specified command or concept. Enter the name of a cmdlet, function, provider, script, or workflow, such as `Get-Member`, a conceptual topic
+        name, such as `about_Objects`, or an alias, such as `ls`. Wildcard characters are permitted in cmdlet and provider names, but you cannot use wildcard characters
+        to find the names of function help and script help topics.
+
+        To get help for a script that is not located in a path that is listed in the Path environment variable, type the path and file name of the script.
+
+        If you enter the exact name of a help topic, Get-Help displays the topic contents. If you enter a word or word pattern that appears in several help topic
+        titles, Get-Help displays a list of the matching titles. If you enter a word that does not match any help topic titles, Get-Help displays a list of topics that
+        include that word in their contents.
+
+        The names of conceptual topics, such as `about_Objects`, must be entered in English, even in non-English versions of Windows PowerShell.
+
+        Required?                    false
+        Position?                    0
+        Default value                None
+        Accept pipeline input?       True (ByPropertyName)
+        Accept wildcard characters?  false
+
+    -Online [<SwitchParameter>]
+        Displays the online version of a help topic in the default Internet browser. This parameter is valid only for cmdlet, function, workflow and script help topics.
+        You cannot use the Online parameter in Get-Help commands in a remote session.
+
+        For information about supporting this feature in help topics that you write, see about_Comment_Based_Help (http://go.microsoft.com/fwlink/?LinkID=144309), and
+        Supporting Online Help (http://go.microsoft.com/fwlink/?LinkID=242132), and How to Write Cmdlet Helphttp://go.microsoft.com/fwlink/?LinkID=123415
+        (http://go.microsoft.com/fwlink/?LinkID=123415) in the Microsoft Developer Network MSDN library.
+
+        Required?                    true
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+
+    -Parameter <String>
+        Displays only the detailed descriptions of the specified parameters. Wildcards are permitted.
+
+        This parameter has no effect on displays of conceptual ("About_") help.
+
+        Required?                    true
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+
+    -Path <String>
+        Gets help that explains how the cmdlet works in the specified provider path. Enter a Windows PowerShell provider path.
+
+        This parameter gets a customized version of a cmdlet help topic that explains how the cmdlet works in the specified Windows PowerShell provider path. This
+        parameter is effective only for help about a provider cmdlet and only when the provider includes a custom version of the provider cmdlet help topic in its help
+        file. To use this parameter, install the help file for the module that includes the provider.
+
+        To see the custom cmdlet help for a provider path, go to the provider path location and enter a Get-Help command or, from any path location, use the Path
+        parameter of Get-Help to specify the provider path. You can also find custom cmdlet help online in the provider help section of the help topics. For example,
+        you can find help for the New-Item cmdlet in the Wsman:\*\ClientCertificate path (http://go.microsoft.com/fwlink/?LinkID=158676).
+
+        For more information about Windows PowerShell providers, see about_Providers (http://go.microsoft.com/fwlink/?LinkID=113250) in the TechNet library.
+
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+
+    -Role <String[]>
+        Displays help customized for the specified user role. Enter a role. Wildcard characters are permitted.
+
+        Enter the role that the user plays in an organization. Some cmdlets display different text in their help files based on the value of this parameter. This
+        parameter has no effect on help for the core cmdlets.
+
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+
+    -ShowWindow [<SwitchParameter>]
+        Displays the help topic in a window for easier reading. The window includes a Find search feature and a Settings box that lets you set options for the display.
+        These include options to display only selected sections of a help topic.
+
+        The ShowWindow parameter supports help topics for commands, which include cmdlets, functions, CIM commands, workflows, and scripts, and conceptual About topics.
+        It does not support provider help.
+
+        This parameter was introduced in Windows PowerShell 3.0.
+
+        Required?                    true
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+INPUTS
+    None
+        You cannot pipe objects to this cmdlet.
+
+
+OUTPUTS
+    ExtendedCmdletHelpInfo
+        If you run Get-Help on a command that does not have a help file, Get-Help returns an ExtendedCmdletHelpInfo object that represents autogenerated help.
+
+    System.String
+        If you get a conceptual help topic, Get-Help returns it as a string.
+
+    MamlCommandHelpInfo
+        If you get a command that has a help file, Get-Help returns a MamlCommandHelpInfo object.
+
+
+NOTES
+
+
+        If you do not specify parameters, Get-Help * displays information about the Windows PowerShell help system. Windows PowerShell 3.0 does not include help files.
+        To download and install the help files that Get-Help reads, use the Update-Help cmdlet. You can use the Update-Help * cmdlet to download and install help files
+        for the core commands that come with Windows PowerShell and for any modules that you install. You can also use it to update the help files so that the help on
+        your computer is never outdated.
+
+        You can also read the help topics about the commands that come with Windows PowerShell online starting at Scripting with Windows
+        PowerShellhttp://go.microsoft.com/fwlink/?LinkID=107116 (http://go.microsoft.com/fwlink/?LinkID=107116).  Get-Help displays help in the locale set for the
+        Windows operating system or in the fallback language for that locale. If you do not have help files for the primary or fallback locale, Get-Help * behaves as if
+        there are no help files on the computer. To get help for a different locale, use Region and Language in Control Panel to change the settings.
+
+        * The full view of help includes a table of information about the parameters. The table includes the following fields:
+
+
+        - Required. Indicates whether the parameter is required (true) or optional (false).
+
+        - Position. Indicates whether the parameter is named or positional (numbered). Positional parameters must appear in a specified place in the command.
+
+        ---- "Named" indicates that the parameter name is required, but that the parameter can appear anywhere in the command.
+
+        ---- <Number> indicates that the parameter name is optional, but when the name is omitted, the parameter must be in the place specified by the number. For
+        example, "2" indicates that when the parameter name is omitted, the parameter must be the second (2) or only unnamed parameter in the command. When the
+        parameter name is used, the parameter can appear anywhere in the command.
+
+        - Default value. The parameter value that Windows PowerShell uses if you do not include the parameter in the command.
+
+        - Accepts pipeline input. Indicates whether you can (true) or cannot (false) send objects to the parameter through a pipeline. "By Property Name" means that the
+        pipelined object must have a property that has the same name as the parameter name.
+        - Accepts wildcard characters. Indicates whether the value of a parameter can include wildcard characters, such as * and ?.
+
+
+    Example 1: Display help about the help system
+
+    PS C:\>Get-Help
+
+    This command displays help about the Windows PowerShell help system.
+    Example 2: Display available help topics
+
+    PS C:\>Get-Help *
+
+    This command displays a list of the available help topics.
+    Example 3: Display basic information about a cmdlet
+
+    PS C:\>Get-Help Get-Alias
+    PS C:\> Help Get-Alias
+    PS C:\> Get-Alias -?
+
+    These commands display basic information about the Get-Alias cmdlet. The Get-Help and ? commands display the information on a single page. The Help command displays
+    the information one page at a time.
+    Example 4: Display a list of conceptual topics
+
+    PS C:\>Get-Help about_*
+
+    This command displays a list of the conceptual topics included in Windows PowerShell help. All of these topics begin with the characters about_. To display a
+    particular help file, type get-help <topic-name>, for example, `Get-Help about_Signing`.
+
+    This command displays the conceptual topics only when the help files for those topics are installed on the computer. For information about downloading and
+    installing help files in Windows PowerShell 3.0, see Update-Help.
+    Example 5: Download and install help files
+
+    The first command uses the **Get-Help** cmdlet to get help for the Get-Command cmdlet. Without help files, **Get-Help** display the cmdlet name, syntax and alias of
+    **Get-Command**, and prompts you to use the **Update-Help** cmdlet to get the newest help files.
+    PS C:\>Get-Help Get-Command
+    NAME
+        Get-Command
+
+
+    SYNTAX
+
+     Get-Command [[-Name] <string[]>] [-CommandType {Alias | Function | Filter | Cmdlet | ExternalScript | Application |
+
+        Script | All}] [[-ArgumentList] <Object[]>] [-Module <string[]>] [-Syntax] [-TotalCount <int>] [<CommonParameters>]
+
+
+        Get-Command [-Noun <string[]>] [-Verb <string[]>] [[-ArgumentList] <Object[]>] [-Module <string[]>] [-Syntax]
+
+        [-TotalCount <int>] [<CommonParameters>]
+
+
+
+    ALIASES
+        gcm
+
+
+    REMARKS
+        Get-Help cannot find the help files for this cmdlet on this computer.
+        It is displaying only partial help. To download and install help files
+        for this cmdlet, use **Update-Help**.
+
+    The second command runs the **Update-Help** cmdlet without parameters. This command downloads help files from the Internet for all of the modules in the current
+    session and installs them on the local computer.This command works only when the local computer is connected to the Internet. If your computer is not connected to
+    the Internet, you might be able to install help files from a network share. For more information, see Save-Help.
+    PS C:\>Update-Help
+
+    Now that the help files are downloaded, we can repeat the first command in the sequence. This command gets help for the **Get-Command** cmdlet. The cmdlet now gets
+    more extensive help for **Get-Command** and you can use the *Detailed*, *Full*, *Example*, and *Parameter* parameters of **Get-Help** to customize the displays.You
+    can use the **Get-Help** cmdlet as soon as the **Update-Help** command finishes. You do not have to restart Windows PowerShell.
+    PS C:\>Get-Help Get-Command
+
+    This example shows how to download and install new or updated help files for a module. It uses features that were introduced in Windows PowerShell 3.0.
+
+    The example compares the help that Get-Help displays for commands when you do not have help files installed on your computer and when you do have help files. You
+    can use the same command sequence to update the help files on your computer so that your local help content is never obsolete.
+
+    To download and install the help files for the commands that come with Windows PowerShell, and for any modules in the $pshome\Modules directory, open Windows
+    PowerShell by using the Run as administrator option. If you are not a member of the Administrators group on the computer, you cannot download help for these
+    modules. However, you can use the Online parameter to open the online version of help for a command, and you can read the help for Windows PowerShell in the TechNet
+    library starting at Scripting with Windows PowerShellhttp://go.microsoft.com/fwlink/?LinkID=107116 (http://go.microsoft.com/fwlink/?LinkID=107116).
+    Example 6: Display detailed help
+
+    PS C:\>Get-Help ls -Detailed
+
+    This command displays detailed help for the Get-ChildItem cmdlet by specifying one of its aliases, ls. The Detailed parameter of Get-Help gets the detailed view of
+    the help topic, which includes parameter descriptions and examples. To see the complete help topic for a cmdlet, use the Full parameter.
+
+    The Full and Detailed parameters are effective only when help files for the command are installed on the computer.
+    Example 7: Display full information for a cmdlet
+
+    PS C:\>Get-Help Format-Table -Full
+
+    This command uses the Full parameter of Get-Help to display the full view help for the Format-Table cmdlet. The full view of help includes parameter descriptions,
+    examples, and a table of technical details about the parameters.
+
+    The Full parameter is effective only when help files for the command are installed on the computer.
+    Example 8: Display examples for a cmdlet
+
+    PS C:\>Get-Help Start-Service -Examples
+
+    This command displays examples of using the Start-Service cmdlet. It uses the Examples parameter of Get-Help to display only the Examples section of the cmdlet help
+    topics.
+
+    The Examples parameter is effective only when help files for the command are installed on the computer.
+    Example 9: Display parameter help
+
+    PS C:\>Get-Help Format-List -Parameter GroupBy
+
+    This command uses the Parameter parameter of Get-Help to display a detailed description of the GroupBy parameter of the Format-List cmdlet. For detailed
+    descriptions of all parameters of the Format-List cmdlet, type `Get-Help Format-List -Parameter *`.
+    Example 10: Search for a word in cmdlet help
+
+    PS C:\>Get-Help Add-Member -Full | Out-String -Stream | Select-String -Pattern Clixml
+
+    This example shows how to search for a word in particular cmdlet help topic. This command searches for the word Clixml in the full version of the help topic for the
+    Add-Member cmdlet.
+
+    Because the Get-Help cmdlet generates a MamlCommandHelpInfo object, not a string, you have to use a cmdlet that transforms the help topic content into a string,
+    such as Out-String or Out-File.
+    Example 11: Display online version of help
+
+    PS C:\>Get-Help Get-Member -Online
+
+    This command displays the online version of the help topic for the Get-Member cmdlet.
+    Example 12: Display a list of topics that include a word
+
+    PS C:\>Get-Help remoting
+
+    This command displays a list of topics that include the word remoting.
+
+    When you enter a word that does not appear in any topic title, Get-Help displays a list of topics that include that word.
+    Example 13: Display provider specific help
+
+    The first command uses the *Path* parameter of **Get-Help** to specify the provider path. This command can be entered at any path location.
+    PS C:\>Get-Help Get-Item -Path SQLSERVER:\DataCollection
+
+    NAME
+
+        Get-Item
+
+
+    SYNOPSIS
+
+        Gets a collection of Server objects for the local computer and any computers
+
+        to which you have made a SQL Server PowerShell connection.
+
+        ...
+
+    The second command uses the Set-Location cmdlet (alias = "cd") to navigate to the provider path. From that location, even without the *Path* parameter, the
+    **Get-Help** command gets the provider-specific help for the **Get-Item** cmdlet.
+    PS C:\>cd SQLSERVER:\DataCollection
+    SQLSERVER:\DataCollection> Get-Help Get-Item
+
+    NAME
+
+        Get-Item
+
+
+    SYNOPSIS
+
+        Gets a collection of Server objects for the local computer and any computers
+
+        to which you have made a SQL Server PowerShell connection.
+
+        ...
+
+
+    The third command shows that a **Get-Help** command in a file system path, and without the *Path* parameter, gets the standard help for the **Get-Item** cmdlet.
+    PS C:\>Get-Item
+
+    NAME
+
+        Get-Item
+
+
+    SYNOPSIS
+
+        Gets the item at the specified location.
+        ...
+
+    This example shows how to get help that explains how to use the Get-Item cmdlet in the DataCollection node of the Windows PowerShellSQL Server provider. The example
+    shows two ways of getting the provider-specific help for Get-Item .
+
+    You can also get provider-specific help for cmdlets online in the section that describes the provider. For example, for provider-specific online help for the
+    New-Item cmdlet in each WSMan provider path, see New-Item for ClientCertificatehttp://go.microsoft.com/fwlink/?LinkID=158676 in the TechNet library.
+    Example 14: Display help for a script
+
+    PS C:\>Get-Help C:\PS-Test\MyScript.ps1
+
+    This command gets help for the MyScript.ps1 script. For information about how to write help for your functions and scripts, see about_Comment_Based_Help.
+
+RELATED LINKS
+    Online Version: http://go.microsoft.com/fwlink/?LinkId=821483
+    Updatable Help Status Table (http://go.microsoft.com/fwlink/?LinkID=270007) http://go.microsoft.com/fwlink/?LinkID=270007
+    about_Command_Syntax
+    Get-Command
+
+
+
+PS C:\WINDOWS\system32> get-help get-help -examples
+
+NAME
+    Get-Help
+
+SYNOPSIS
+    Displays information about Windows PowerShell commands and concepts.
+
+
+    Example 1: Display help about the help system
+
+    PS C:\>Get-Help
+
+    This command displays help about the Windows PowerShell help system.
+    Example 2: Display available help topics
+
+    PS C:\>Get-Help *
+
+    This command displays a list of the available help topics.
+    Example 3: Display basic information about a cmdlet
+
+    PS C:\>Get-Help Get-Alias
+    PS C:\> Help Get-Alias
+    PS C:\> Get-Alias -?
+
+    These commands display basic information about the Get-Alias cmdlet. The Get-Help and ? commands display the information on a single page. The Help command displays
+    the information one page at a time.
+    Example 4: Display a list of conceptual topics
+
+    PS C:\>Get-Help about_*
+
+    This command displays a list of the conceptual topics included in Windows PowerShell help. All of these topics begin with the characters about_. To display a
+    particular help file, type get-help <topic-name>, for example, `Get-Help about_Signing`.
+
+    This command displays the conceptual topics only when the help files for those topics are installed on the computer. For information about downloading and
+    installing help files in Windows PowerShell 3.0, see Update-Help.
+    Example 5: Download and install help files
+
+    The first command uses the **Get-Help** cmdlet to get help for the Get-Command cmdlet. Without help files, **Get-Help** display the cmdlet name, syntax and alias of
+    **Get-Command**, and prompts you to use the **Update-Help** cmdlet to get the newest help files.
+    PS C:\>Get-Help Get-Command
+    NAME
+        Get-Command
+
+
+    SYNTAX
+
+     Get-Command [[-Name] <string[]>] [-CommandType {Alias | Function | Filter | Cmdlet | ExternalScript | Application |
+
+        Script | All}] [[-ArgumentList] <Object[]>] [-Module <string[]>] [-Syntax] [-TotalCount <int>] [<CommonParameters>]
+
+
+        Get-Command [-Noun <string[]>] [-Verb <string[]>] [[-ArgumentList] <Object[]>] [-Module <string[]>] [-Syntax]
+
+        [-TotalCount <int>] [<CommonParameters>]
+
+
+
+    ALIASES
+        gcm
+
+
+    REMARKS
+        Get-Help cannot find the help files for this cmdlet on this computer.
+        It is displaying only partial help. To download and install help files
+        for this cmdlet, use **Update-Help**.
+
+    The second command runs the **Update-Help** cmdlet without parameters. This command downloads help files from the Internet for all of the modules in the current
+    session and installs them on the local computer.This command works only when the local computer is connected to the Internet. If your computer is not connected to
+    the Internet, you might be able to install help files from a network share. For more information, see Save-Help.
+    PS C:\>Update-Help
+
+    Now that the help files are downloaded, we can repeat the first command in the sequence. This command gets help for the **Get-Command** cmdlet. The cmdlet now gets
+    more extensive help for **Get-Command** and you can use the *Detailed*, *Full*, *Example*, and *Parameter* parameters of **Get-Help** to customize the displays.You
+    can use the **Get-Help** cmdlet as soon as the **Update-Help** command finishes. You do not have to restart Windows PowerShell.
+    PS C:\>Get-Help Get-Command
+
+    This example shows how to download and install new or updated help files for a module. It uses features that were introduced in Windows PowerShell 3.0.
+
+    The example compares the help that Get-Help displays for commands when you do not have help files installed on your computer and when you do have help files. You
+    can use the same command sequence to update the help files on your computer so that your local help content is never obsolete.
+
+    To download and install the help files for the commands that come with Windows PowerShell, and for any modules in the $pshome\Modules directory, open Windows
+    PowerShell by using the Run as administrator option. If you are not a member of the Administrators group on the computer, you cannot download help for these
+    modules. However, you can use the Online parameter to open the online version of help for a command, and you can read the help for Windows PowerShell in the TechNet
+    library starting at Scripting with Windows PowerShellhttp://go.microsoft.com/fwlink/?LinkID=107116 (http://go.microsoft.com/fwlink/?LinkID=107116).
+    Example 6: Display detailed help
+
+    PS C:\>Get-Help ls -Detailed
+
+    This command displays detailed help for the Get-ChildItem cmdlet by specifying one of its aliases, ls. The Detailed parameter of Get-Help gets the detailed view of
+    the help topic, which includes parameter descriptions and examples. To see the complete help topic for a cmdlet, use the Full parameter.
+
+    The Full and Detailed parameters are effective only when help files for the command are installed on the computer.
+    Example 7: Display full information for a cmdlet
+
+    PS C:\>Get-Help Format-Table -Full
+
+    This command uses the Full parameter of Get-Help to display the full view help for the Format-Table cmdlet. The full view of help includes parameter descriptions,
+    examples, and a table of technical details about the parameters.
+
+    The Full parameter is effective only when help files for the command are installed on the computer.
+    Example 8: Display examples for a cmdlet
+
+    PS C:\>Get-Help Start-Service -Examples
+
+    This command displays examples of using the Start-Service cmdlet. It uses the Examples parameter of Get-Help to display only the Examples section of the cmdlet help
+    topics.
+
+    The Examples parameter is effective only when help files for the command are installed on the computer.
+    Example 9: Display parameter help
+
+    PS C:\>Get-Help Format-List -Parameter GroupBy
+
+    This command uses the Parameter parameter of Get-Help to display a detailed description of the GroupBy parameter of the Format-List cmdlet. For detailed
+    descriptions of all parameters of the Format-List cmdlet, type `Get-Help Format-List -Parameter *`.
+    Example 10: Search for a word in cmdlet help
+
+    PS C:\>Get-Help Add-Member -Full | Out-String -Stream | Select-String -Pattern Clixml
+
+    This example shows how to search for a word in particular cmdlet help topic. This command searches for the word Clixml in the full version of the help topic for the
+    Add-Member cmdlet.
+
+    Because the Get-Help cmdlet generates a MamlCommandHelpInfo object, not a string, you have to use a cmdlet that transforms the help topic content into a string,
+    such as Out-String or Out-File.
+    Example 11: Display online version of help
+
+    PS C:\>Get-Help Get-Member -Online
+
+    This command displays the online version of the help topic for the Get-Member cmdlet.
+    Example 12: Display a list of topics that include a word
+
+    PS C:\>Get-Help remoting
+
+    This command displays a list of topics that include the word remoting.
+
+    When you enter a word that does not appear in any topic title, Get-Help displays a list of topics that include that word.
+    Example 13: Display provider specific help
+
+    The first command uses the *Path* parameter of **Get-Help** to specify the provider path. This command can be entered at any path location.
+    PS C:\>Get-Help Get-Item -Path SQLSERVER:\DataCollection
+
+    NAME
+
+        Get-Item
+
+
+    SYNOPSIS
+
+        Gets a collection of Server objects for the local computer and any computers
+
+        to which you have made a SQL Server PowerShell connection.
+
+        ...
+
+    The second command uses the Set-Location cmdlet (alias = "cd") to navigate to the provider path. From that location, even without the *Path* parameter, the
+    **Get-Help** command gets the provider-specific help for the **Get-Item** cmdlet.
+    PS C:\>cd SQLSERVER:\DataCollection
+    SQLSERVER:\DataCollection> Get-Help Get-Item
+
+    NAME
+
+        Get-Item
+
+
+    SYNOPSIS
+
+        Gets a collection of Server objects for the local computer and any computers
+
+        to which you have made a SQL Server PowerShell connection.
+
+        ...
+
+
+    The third command shows that a **Get-Help** command in a file system path, and without the *Path* parameter, gets the standard help for the **Get-Item** cmdlet.
+    PS C:\>Get-Item
+
+    NAME
+
+        Get-Item
+
+
+    SYNOPSIS
+
+        Gets the item at the specified location.
+        ...
+
+    This example shows how to get help that explains how to use the Get-Item cmdlet in the DataCollection node of the Windows PowerShellSQL Server provider. The example
+    shows two ways of getting the provider-specific help for Get-Item .
+
+    You can also get provider-specific help for cmdlets online in the section that describes the provider. For example, for provider-specific online help for the
+    New-Item cmdlet in each WSMan provider path, see New-Item for ClientCertificatehttp://go.microsoft.com/fwlink/?LinkID=158676 in the TechNet library.
+    Example 14: Display help for a script
+
+    PS C:\>Get-Help C:\PS-Test\MyScript.ps1
+
+    This command gets help for the MyScript.ps1 script. For information about how to write help for your functions and scripts, see about_Comment_Based_Help.
+
+
+
+PS C:\WINDOWS\system32> get-help about*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+about_ActivityCommonParameters    HelpFile                            Describes the parameters that Windows PowerShell
+about_Aliases                     HelpFile                            Describes how to use alternate names for cmdlets and commands in Windows
+about_Arithmetic_Operators        HelpFile                            Describes the operators that perform arithmetic in Windows PowerShell.
+about_Arrays                      HelpFile                            Describes arrays, which are data structures designed to store
+about_Assignment_Operators        HelpFile                            Describes how to use operators to assign values to variables.
+about_Automatic_Variables         HelpFile                            Describes variables that store state information for Windows PowerShell.
+about_Break                       HelpFile                            Describes a statement you can use to immediately exit Foreach, For, While,
+about_Checkpoint-Workflow         HelpFile                            Describes the Checkpoint-Workflow activity, which
+about_CimSession                  HelpFile                            Describes a CimSession object and the difference between CIM sessions and
+about_Classes                     HelpFile                            Describes how you can use classes to develop in Windows PowerShell
+about_Command_Precedence          HelpFile                            Describes how Windows PowerShell determines which command to run.
+about_Command_Syntax              HelpFile                            Describes the syntax diagrams that are used in Windows PowerShell.
+about_Comment_Based_Help          HelpFile                            Describes how to write comment-based help topics for functions and scripts.
+about_CommonParameters            HelpFile                            Describes the parameters that can be used with any cmdlet.
+about_Comparison_Operators        HelpFile                            Describes the operators that compare values in Windows PowerShell.
+about_Continue                    HelpFile                            Describes how the Continue statement immediately returns the program flow
+about_Core_Commands               HelpFile                            Lists the cmdlets that are designed for use with Windows PowerShell
+about_Data_Sections               HelpFile                            Explains Data sections, which isolate text strings and other read-only
+about_Debuggers                   HelpFile                            Describes the Windows PowerShell debugger.
+about_DesiredStateConfiguration   HelpFile                            Provides a brief introduction to the Windows
+about_Do                          HelpFile                            Runs a statement list one or more times, subject to a While or Until
+about_Environment_Variables       HelpFile                            Describes how to access Windows environment variables in Windows
+about_Escape_Characters           HelpFile                            Introduces the escape character in Windows PowerShell and explains
+about_Eventlogs                   HelpFile                            Windows PowerShell creates a Windows event log that is
+about_Execution_Policies          HelpFile                            Describes the Windows PowerShell execution policies and explains
+about_For                         HelpFile                            Describes a language command you can use to run statements based on a
+about_ForEach-Parallel            HelpFile                            Describes the ForEach -Parallel language construct in
+about_Foreach                     HelpFile                            Describes a language command you can use to traverse all the items in a
+about_Format.ps1xml               HelpFile                            The Format.ps1xml files in Windows PowerShell define the default display
+about_Functions                   HelpFile                            Describes how to create and use functions in Windows PowerShell.
+about_Functions_Advanced          HelpFile                            Introduces advanced functions that act similar to cmdlets.
+about_Functions_Advanced_Methods  HelpFile                            Describes how functions that specify the CmdletBinding attribute can use
+about_Functions_Advanced_Param... HelpFile                            Explains how to add parameters to advanced functions.
+about_Functions_CmdletBindingA... HelpFile                            Describes the attribute that makes a function work like a
+about_Functions_OutputTypeAttr... HelpFile                            Describes an attribute that reports the type of object that the function
+about_Group_Policy_Settings       HelpFile                            Describes the Group Policy settings for Windows PowerShell
+about_Hash_Tables                 HelpFile                            Describes how to create, use, and sort hash tables in Windows PowerShell.
+about_Hidden                      HelpFile                            Describes the Hidden keyword, which hides class members from default Get-Member results.
+about_History                     HelpFile                            Describes how to get and run commands in the command history.
+about_If                          HelpFile                            Describes a language command you can use to run statement lists based
+about_InlineScript                HelpFile                            Describes the InlineScript activity, which runs Windows
+about_Jobs                        HelpFile                            Provides information about how Windows PowerShell background jobs run a
+about_Job_Details                 HelpFile                            Provides details about background jobs on local and remote computers.
+about_Join                        HelpFile                            Describes how the join operator (-join) combines multiple strings into a
+about_Language_Keywords           HelpFile                            Describes the keywords in the Windows PowerShell scripting language.
+about_Language_Modes              HelpFile                            Explains language modes and their effect on Windows
+about_Line_Editing                HelpFile                            Describes how to edit commands at the Windows PowerShell command prompt.
+about_Locations                   HelpFile                            Describes how to access items from the working location in Windows
+about_Logical_Operators           HelpFile                            Describes the operators that connect statements in Windows PowerShell.
+about_Methods                     HelpFile                            Describes how to use methods to perform actions on objects in Windows
+about_Modules                     HelpFile                            Explains how to install, import, and use Windows PowerShell modules.
+about_Objects                     HelpFile                            Provides essential information about objects in Windows PowerShell.
+about_Object_Creation             HelpFile                            Explains how to create objects in Windows PowerShell.
+about_Operators                   HelpFile                            Describes the operators that are supported by Windows PowerShell.
+about_Operator_Precedence         HelpFile                            Lists the Windows PowerShell operators in precedence order.
+about_PackageManagement           HelpFile                            PackageManagement is an aggregator for software package managers.
+about_Parallel                    HelpFile                            Describes the Parallel keyword, which runs the
+about_Parameters                  HelpFile                            Describes how to work with command parameters in Windows PowerShell.
+about_Parameters_Default_Values   HelpFile                            Describes how to set custom default values for the parameters of cmdlets and
+about_Parsing                     HelpFile                            Describes how Windows PowerShell parses commands.
+about_Parsing_LocTest             HelpFile                            Describes how Windows PowerShell parses commands.
+about_Path_Syntax                 HelpFile                            Describes the full and relative path name formats in Windows PowerShell.
+about_Pipelines                   HelpFile                            Combining commands into pipelines in the Windows PowerShell
+about_PowerShell.exe              HelpFile                            Explains how to use the PowerShell.exe command-line tool. Displays
+about_PowerShell_Ise.exe          HelpFile                            Explains how to use the PowerShell_Ise.exe command-line tool.
+about_Preference_Variables        HelpFile                            Variables that customize the behavior of Windows PowerShell
+about_Profiles                    HelpFile                            Describes how to create and use a Windows PowerShell profile.
+about_Prompts                     HelpFile                            Describes the Prompt function and demonstrates how to create a custom
+about_Properties                  HelpFile                            Describes how to use object properties in Windows PowerShell.
+about_Providers                   HelpFile                            Describes how Windows PowerShell providers provide access to data and
+about_PSConsoleHostReadLine       HelpFile                            Explains how to create a customize how Windows PowerShell reads input
+about_PSReadline                  HelpFile
+about_PSSessions                  HelpFile                            Describes Windows PowerShell sessions (PSSessions) and explains how to
+about_PSSession_Details           HelpFile                            Provides detailed information about Windows PowerShell sessions and the
+about_PSSnapins                   HelpFile                            Describes Windows PowerShell snap-ins and shows how to use and manage them.
+about_Quoting_Rules               HelpFile                            Describes rules for using single and double quotation marks
+about_Redirection                 HelpFile                            Explains how to redirect output from Windows PowerShell to text files.
+about_Ref                         HelpFile                            Describes how to create and use a reference variable type.
+about_Regular_Expressions         HelpFile                            Describes regular expressions in Windows PowerShell.
+about_Remote                      HelpFile                            Describes how to run remote commands in Windows PowerShell.
+about_Remote_Disconnected_Sess... HelpFile                            Explains how to disconnect from and reconnect to a PSSession
+about_Remote_FAQ                  HelpFile                            Contains questions and answers about running remote commands
+about_Remote_Jobs                 HelpFile                            Describes how to run background jobs on remote computers.
+about_Remote_Output               HelpFile                            Describes how to interpret and format the output of remote commands.
+about_Remote_Requirements         HelpFile                            Describes the system requirements and configuration requirements for
+about_Remote_Troubleshooting      HelpFile                            Describes how to troubleshoot remote operations in Windows PowerShell.
+about_Remote_Variables            HelpFile                            Explains how to use local and remote variables in remote
+about_Requires                    HelpFile                            Prevents a script from running without the required elements.
+about_Reserved_Words              HelpFile                            Lists the reserved words that cannot be used as identifiers because they
+about_Return                      HelpFile                            Exits the current scope, which can be a function, script, or script block.
+about_Run_With_PowerShell         HelpFile                            Explains how to use the "Run with PowerShell" feature to run
+about_Scheduled_Jobs              HelpFile                            Describes scheduled jobs and explains how to use and manage
+about_Scheduled_Jobs_Advanced     HelpFile                            Explains advanced scheduled job topics, including the file structure
+about_Scheduled_Jobs_Basics       HelpFile                            Explains how to create and manage scheduled jobs.
+about_Scheduled_Jobs_Troublesh... HelpFile                            Explains how to resolve problems with scheduled jobs
+about_Scopes                      HelpFile                            Explains the concept of scope in Windows PowerShell and shows how to set
+about_Scripts                     HelpFile                            Describes how to run and write scripts in Windows PowerShell.
+about_Script_Blocks               HelpFile                            Defines what a script block is and explains how to use script blocks in
+about_Script_Internationalization HelpFile                            Describes the script internationalization features of Windows PowerShell 2.0
+about_Sequence                    HelpFile                            Describes the Sequence keyword, which runs selected
+about_Session_Configurations      HelpFile                            Describes session configurations, which determine the users who can
+about_Session_Configuration_Files HelpFile                            Describes session configuration files, which can be used in a
+about_Signing                     HelpFile                            Explains how to sign scripts so that they comply with the Windows
+about_Special_Characters          HelpFile                            Describes the special characters that you can use to control how
+about_Splatting                   HelpFile                            Describes how to use splatting to pass parameters to commands
+about_Split                       HelpFile                            Explains how to use the Split operator to split one or more strings into
+about_Suspend-Workflow            HelpFile                            Describes the Suspend-Workflow activity, which suspends
+about_Switch                      HelpFile                            Explains how to use a switch to handle multiple If statements.
+about_Throw                       HelpFile                            Describes the Throw keyword, which generates a terminating error.
+about_Transactions                HelpFile                            Describes how to manage transacted operations in Windows PowerShell.
+about_Trap                        HelpFile                            Describes a keyword that handles a terminating error.
+about_Try_Catch_Finally           HelpFile                            Describes how to use the Try, Catch, and Finally blocks to handle
+about_Types.ps1xml                HelpFile                            Explains how to use Types.ps1xml files to extend the types of objects
+about_Type_Operators              HelpFile                            Describes the operators that work with Microsoft .NET Framework types.
+about_Updatable_Help              HelpFile                            Describes the updatable help system in Windows PowerShell.
+about_Variables                   HelpFile                            Describes how variables store values that can be used in Windows
+about_While                       HelpFile                            Describes a language statement that you can use to run a command block
+about_Wildcards                   HelpFile                            Describes how to use wildcard characters in Windows PowerShell.
+about_Windows_PowerShell_5.0      HelpFile                            Describes new features that are included in
+about_Windows_PowerShell_ISE      HelpFile                            Describes the features and system requirements of Windows PowerShell
+about_Windows_RT                  HelpFile                            Explains limitations of Windows PowerShell 4.0 on Windows RT 8.1.
+about_WMI                         HelpFile                            Windows Management Instrumentation (WMI) uses the
+about_WMI_Cmdlets                 HelpFile                            Provides background information about Windows Management Instrumentation
+about_WorkflowCommonParameters    HelpFile                            This topic describes the parameters that are valid on all Windows
+about_Workflows                   HelpFile                            Provides a brief introduction to the Windows
+about_WQL                         HelpFile                            Describes WMI Query Language (WQL), which can be
+about_WS-Management_Cmdlets       HelpFile                            Provides an overview of Web Services for Management (WS-Management) as
+about_BeforeEach_AfterEach        HelpFile                            performed at the beginning and end of every It block. This can eliminate duplication of code
+about_Mocking                     HelpFile                            Pester provides a set of Mocking functions making it easy to fake dependencies
+about_Pester                      HelpFile                            Pester is a BDD based test runner for PowerShell.
+about_should                      HelpFile                            Provides assertion convenience methods for comparing objects and throwing
+about_TestDrive                   HelpFile                            A PSDrive for file activity limited to the scope of a singe Describe or
+about_Scheduled_Jobs              HelpFile                            Describes scheduled jobs and explains how to use and manage
+about_Scheduled_Jobs_Advanced     HelpFile                            Explains advanced scheduled job topics, including the file structure
+about_Scheduled_Jobs_Basics       HelpFile                            Explains how to create and manage scheduled jobs.
+about_Scheduled_Jobs_Troublesh... HelpFile                            Explains how to resolve problems with scheduled jobs
+about_ActivityCommonParameters    HelpFile                            Describes the parameters that Windows PowerShell
+about_Checkpoint-Workflow         HelpFile                            Describes the Checkpoint-Workflow activity, which
+about_ForEach-Parallel            HelpFile                            Describes the ForEach -Parallel language construct in
+about_InlineScript                HelpFile                            Describes the InlineScript activity, which runs Windows
+about_Parallel                    HelpFile                            Describes the Parallel keyword, which runs the
+about_Sequence                    HelpFile                            Describes the Sequence keyword, which runs selected
+about_Suspend-Workflow            HelpFile                            Describes the Suspend-Workflow activity, which suspends
+about_WorkflowCommonParameters    HelpFile                            This topic describes the parameters that are valid on all Windows
+about_Workflows                   HelpFile                            Provides a brief introduction to the Windows
+
+
+PS C:\WINDOWS\system32> get-help set*
+
+Name                              Category  Module                    Synopsis
+----                              --------  ------                    --------
+set                               Alias                               Set-Variable
+Set-PSDebug                       Cmdlet    Microsoft.PowerShell.Core Turns script debugging features on and off, sets the trace level, and toggles strict mode.
+Set-PSSessionConfiguration        Cmdlet    Microsoft.PowerShell.Core Changes the properties of a registered session configuration.
+Set-StrictMode                    Cmdlet    Microsoft.PowerShell.Core Establishes and enforces coding rules in expressions, scripts, and script blocks.
+Set-Alias                         Cmdlet    Microsoft.PowerShell.U... Creates or changes an alias for a cmdlet or other command element in the current Windows PowerSh...
+Set-Date                          Cmdlet    Microsoft.PowerShell.U... Changes the system time on the computer to a time that you specify.
+Set-PSBreakpoint                  Cmdlet    Microsoft.PowerShell.U... Sets a breakpoint on a line, command, or variable.
+Set-TraceSource                   Cmdlet    Microsoft.PowerShell.U... Configures, starts, and stops a trace of Windows PowerShell components.
+Set-Variable                      Cmdlet    Microsoft.PowerShell.U... Sets the value of a variable. Creates the variable if one with the requested name does not exist.
+Set-Clipboard                     Cmdlet    Microsoft.PowerShell.M... Sets the current Windows clipboard entry.
+Set-Content                       Cmdlet    Microsoft.PowerShell.M... Writes or replaces the content in an item with new content.
+Set-Item                          Cmdlet    Microsoft.PowerShell.M... Changes the value of an item to the value specified in the command.
+Set-ItemProperty                  Cmdlet    Microsoft.PowerShell.M... Creates or changes the value of a property of an item.
+Set-Location                      Cmdlet    Microsoft.PowerShell.M... Sets the current working location to a specified location.
+Set-Service                       Cmdlet    Microsoft.PowerShell.M... Starts, stops, and suspends a service, and changes its properties.
+Set-TimeZone                      Cmdlet    Microsoft.PowerShell.M... Sets the system time zone to a specified time zone.
+Set-WmiInstance                   Cmdlet    Microsoft.PowerShell.M... Creates or updates an instance of an existing Windows Management Instrumentation (WMI) class.
+Set-PackageSource                 Cmdlet    PackageManagement         Set-PackageSource...
+Set-TestInconclusive              Function  Pester                    ...
+Set-DynamicParameterVariables     Function  Pester                    ...
+Setup                             Function  Pester                    ...
+Set-PSRepository                  Function  PowerShellGet             ...
+Set-PSReadlineKeyHandler          Cmdlet    PSReadline                Set-PSReadlineKeyHandler...
+Set-PSReadlineOption              Cmdlet    PSReadline                Set-PSReadlineOption...
+Set-AppBackgroundTaskResourceP... Cmdlet    AppBackgroundTask         Set-AppBackgroundTaskResourcePolicy...
+Set-AppLockerPolicy               Cmdlet    AppLocker                 Set-AppLockerPolicy...
+Set-AppvClientPackage             Cmdlet    AppvClient                Set-AppvClientPackage...
+Set-AppvClientMode                Cmdlet    AppvClient                Set-AppvClientMode...
+Set-AppvPublishingServer          Cmdlet    AppvClient                Set-AppvPublishingServer...
+Set-AppvClientConfiguration       Cmdlet    AppvClient                Set-AppvClientConfiguration...
+Set-AppxDefaultVolume             Cmdlet    Appx                      Set-AppxDefaultVolume...
+Set-AssignedAccess                Function  AssignedAccess            Configures a user to launch only one app.
+Set-BitsTransfer                  Cmdlet    BitsTransfer              Set-BitsTransfer...
+Set-BCCache                       Function  BranchCache               ...
+Set-BCDataCacheEntryMaxAge        Function  BranchCache               ...
+Set-BCSecretKey                   Function  BranchCache               ...
+Set-BCMinSMBLatency               Function  BranchCache               ...
+Set-BCAuthentication              Function  BranchCache               ...
+Set-CimInstance                   Cmdlet    CimCmdlets                Set-CimInstance...
+Set-CIPolicyVersion               Cmdlet    ConfigCI                  Set-CIPolicyVersion...
+Set-CIPolicyIdInfo                Cmdlet    ConfigCI                  Set-CIPolicyIdInfo...
+Set-RuleOption                    Cmdlet    ConfigCI                  Set-RuleOption...
+Set-HVCIOptions                   Cmdlet    ConfigCI                  Set-HVCIOptions...
+Set-CIPolicySetting               Cmdlet    ConfigCI                  Set-CIPolicySetting...
+Set-MpPreference                  Function  Defender                  ...
+Set-DOPercentageMaxForegroundB... Cmdlet    DeliveryOptimization      Set-DOPercentageMaxForegroundBandwidth...
+Set-DODownloadMode                Cmdlet    DeliveryOptimization      Set-DODownloadMode...
+Set-DOPercentageMaxBackgroundB... Cmdlet    DeliveryOptimization      Set-DOPercentageMaxBackgroundBandwidth...
+Set-DAEntryPointTableItem         Function  DirectAccessClientComp... ...
+Set-DAClientExperienceConfigur... Function  DirectAccessClientComp... ...
+Set-WindowsProductKey             Cmdlet    Dism                      Set-WindowsProductKey...
+Set-WindowsEdition                Cmdlet    Dism                      Set-WindowsEdition...
+Set-AppXProvisionedDataFile       Cmdlet    Dism                      Set-AppXProvisionedDataFile...
+Set-DnsClient                     Function  DnsClient                 ...
+Set-DnsClientNrptRule             Function  DnsClient                 ...
+Set-DnsClientNrptGlobal           Function  DnsClient                 ...
+Set-DnsClientServerAddress        Function  DnsClient                 ...
+Set-DnsClientGlobalSetting        Function  DnsClient                 ...
+Set-EtwTraceProvider              Function  EventTracingManagement    ...
+Set-AutologgerConfig              Function  EventTracingManagement    ...
+Set-Culture                       Cmdlet    International             Set-Culture...
+Set-WinCultureFromLanguageList... Cmdlet    International             Set-WinCultureFromLanguageListOptOut...
+Set-WinSystemLocale               Cmdlet    International             Set-WinSystemLocale...
+Set-WinUILanguageOverride         Cmdlet    International             Set-WinUILanguageOverride...
+Set-WinAcceptLanguageFromLangu... Cmdlet    International             Set-WinAcceptLanguageFromLanguageListOptOut...
+Set-WinUserLanguageList           Cmdlet    International             Set-WinUserLanguageList...
+Set-WinHomeLocation               Cmdlet    International             Set-WinHomeLocation...
+Set-WinLanguageBarOption          Cmdlet    International             Set-WinLanguageBarOption...
+Set-WinDefaultInputMethodOverride Cmdlet    International             Set-WinDefaultInputMethodOverride...
+Set-IscsiChapSecret               Function  iSCSI                     ...
+Set-KdsConfiguration              Cmdlet    Kds                       Set-KdsConfiguration...
+Set-LocalUser                     Cmdlet    Microsoft.PowerShell.L... Set-LocalUser...
+Set-LocalGroup                    Cmdlet    Microsoft.PowerShell.L... Set-LocalGroup...
+Set-AuthenticodeSignature         Cmdlet    Microsoft.PowerShell.S... Adds an Authenticode signature to a Windows PowerShell script or other file.
+Set-Acl                           Cmdlet    Microsoft.PowerShell.S... Changes the security descriptor of a specified item, such as a file or a registry key.
+Set-ExecutionPolicy               Cmdlet    Microsoft.PowerShell.S... Changes the user preference for the Windows PowerShell execution policy.
+Set-WSManQuickConfig              Cmdlet    Microsoft.WSMan.Manage... Configures the local computer for remote management.
+Set-WSManInstance                 Cmdlet    Microsoft.WSMan.Manage... Modifies the management information that is related to a resource.
+Set-MMAgent                       Function  MMAgent                   ...
+Set-DtcLog                        Function  MsDtc                     ...
+Set-DtcClusterTMMapping           Function  MsDtc                     ...
+Set-DtcTransactionsTraceSession   Function  MsDtc                     ...
+Set-DtcAdvancedSetting            Function  MsDtc                     ...
+Set-DtcAdvancedHostSetting        Function  MsDtc                     ...
+Set-DtcNetworkSetting             Function  MsDtc                     ...
+Set-DtcTransactionsTraceSetting   Function  MsDtc                     ...
+Set-DtcTransaction                Function  MsDtc                     ...
+Set-DtcClusterDefault             Function  MsDtc                     ...
+Set-DtcDefault                    Function  MsDtc                     ...
+Set-NetAdapter                    Function  NetAdapter                ...
+Set-NetAdapterLso                 Function  NetAdapter                ...
+Set-NetAdapterVmq                 Function  NetAdapter                ...
+Set-NetAdapterRsc                 Function  NetAdapter                ...
+Set-NetAdapterEncapsulatedPack... Function  NetAdapter                ...
+Set-NetAdapterPacketDirect        Function  NetAdapter                ...
+Set-NetAdapterIPsecOffload        Function  NetAdapter                ...
+Set-NetAdapterQos                 Function  NetAdapter                ...
+Set-NetAdapterRss                 Function  NetAdapter                ...
+Set-NetAdapterAdvancedProperty    Function  NetAdapter                ...
+Set-NetAdapterRdma                Function  NetAdapter                ...
+Set-NetAdapterBinding             Function  NetAdapter                ...
+Set-NetAdapterPowerManagement     Function  NetAdapter                ...
+Set-NetAdapterChecksumOffload     Function  NetAdapter                ...
+Set-NetAdapterSriov               Function  NetAdapter                ...
+Set-NetConnectionProfile          Function  NetConnection             ...
+Set-NetEventProvider              Function  NetEventPacketCapture     ...
+Set-NetEventVmSwitchProvider      Function  NetEventPacketCapture     ...
+Set-NetEventPacketCaptureProvider Function  NetEventPacketCapture     ...
+Set-NetEventVFPProvider           Function  NetEventPacketCapture     ...
+Set-NetEventWFPCaptureProvider    Function  NetEventPacketCapture     ...
+Set-NetEventSession               Function  NetEventPacketCapture     ...
+Set-NetLbfoTeam                   Function  NetLbfo                   ...
+Set-NetLbfoTeamMember             Function  NetLbfo                   ...
+Set-NetLbfoTeamNic                Function  NetLbfo                   ...
+Set-NetNatGlobal                  Function  NetNat                    ...
+Set-NetNat                        Function  NetNat                    ...
+Set-NetQosPolicy                  Function  NetQos                    ...
+Set-NetIPsecMainModeRule          Function  NetSecurity               ...
+Set-NetIPsecQuickModeCryptoSet    Function  NetSecurity               ...
+Set-NetFirewallApplicationFilter  Function  NetSecurity               ...
+Set-NetFirewallRule               Function  NetSecurity               ...
+Set-NetIPsecRule                  Function  NetSecurity               ...
+Set-NetFirewallInterfaceTypeFi... Function  NetSecurity               ...
+Set-NetIPsecDospSetting           Function  NetSecurity               ...
+Set-NetFirewallProfile            Function  NetSecurity               ...
+Set-NetFirewallAddressFilter      Function  NetSecurity               ...
+Set-NetFirewallPortFilter         Function  NetSecurity               ...
+Set-NetFirewallServiceFilter      Function  NetSecurity               ...
+Set-NetIPsecMainModeCryptoSet     Function  NetSecurity               ...
+Set-NetFirewallSecurityFilter     Function  NetSecurity               ...
+Set-NetIPsecPhase1AuthSet         Function  NetSecurity               ...
+Set-NetFirewallSetting            Function  NetSecurity               ...
+Set-NetIPsecPhase2AuthSet         Function  NetSecurity               ...
+Set-NetFirewallInterfaceFilter    Function  NetSecurity               ...
+Set-NetIPInterface                Function  NetTCPIP                  ...
+Set-NetIPv6Protocol               Function  NetTCPIP                  ...
+Set-NetNeighbor                   Function  NetTCPIP                  ...
+Set-NetRoute                      Function  NetTCPIP                  ...
+Set-NetIPAddress                  Function  NetTCPIP                  ...
+Set-NetIPv4Protocol               Function  NetTCPIP                  ...
+Set-NetUDPSetting                 Function  NetTCPIP                  ...
+Set-NetTCPSetting                 Function  NetTCPIP                  ...
+Set-NetOffloadGlobalSetting       Function  NetTCPIP                  ...
+Set-NCSIPolicyConfiguration       Function  NetworkConnectivityStatus ...
+Set-NetworkSwitchPortMode         Function  NetworkSwitchManager      ...
+Set-NetworkSwitchPortProperty     Function  NetworkSwitchManager      ...
+Set-NetworkSwitchVlanProperty     Function  NetworkSwitchManager      ...
+Set-NetworkSwitchEthernetPortI... Function  NetworkSwitchManager      ...
+Set-Net6to4Configuration          Function  NetworkTransition         ...
+Set-NetIsatapConfiguration        Function  NetworkTransition         ...
+Set-NetTeredoConfiguration        Function  NetworkTransition         ...
+Set-NetIPHttpsConfiguration       Function  NetworkTransition         ...
+Set-NetDnsTransitionConfiguration Function  NetworkTransition         ...
+Set-NetNatTransitionConfiguration Function  NetworkTransition         ...
+Set-PcsvDeviceNetworkConfigura... Function  PcsvDevice                ...
+Set-PcsvDeviceBootConfiguration   Function  PcsvDevice                ...
+Set-PcsvDeviceUserPassword        Function  PcsvDevice                ...
+Set-CertificateAutoEnrollmentP... Cmdlet    PKI                       Set-CertificateAutoEnrollmentPolicy...
+Set-Printer                       Function  PrintManagement           ...
+Set-PrintConfiguration            Function  PrintManagement           ...
+Set-PrinterProperty               Function  PrintManagement           ...
+Set-ProcessMitigation             Cmdlet    ProcessMitigations        Set-ProcessMitigation...
+Set-DscLocalConfigurationManager  Cmdlet    PSDesiredStateConfigur... Set-DscLocalConfigurationManager...
+Set-LogProperties                 Function  PSDiagnostics             ...
+Set-JobTrigger                    Cmdlet    PSScheduledJob            Set-JobTrigger...
+Set-ScheduledJobOption            Cmdlet    PSScheduledJob            Set-ScheduledJobOption...
+Set-ScheduledJob                  Cmdlet    PSScheduledJob            Set-ScheduledJob...
+Set-ScheduledTask                 Function  ScheduledTasks            ...
+Set-ClusteredScheduledTask        Function  ScheduledTasks            ...
+Set-SecureBootUEFI                Cmdlet    SecureBoot                Set-SecureBootUEFI...
+Set-SmbClientConfiguration        Function  SmbShare                  ...
+Set-SmbServerConfiguration        Function  SmbShare                  ...
+Set-SmbBandwidthLimit             Function  SmbShare                  ...
+Set-SmbPathAcl                    Function  SmbShare                  ...
+Set-SmbShare                      Function  SmbShare                  ...
+Set-StorageFileServer             Function  Storage                   ...
+Set-StorageSubSystem              Function  Storage                   ...
+Set-ResiliencySetting             Function  Storage                   ...
+Set-PhysicalDisk                  Function  Storage                   ...
+Set-StorageHealthSetting          Function  Storage                   ...
+Set-StoragePool                   Function  Storage                   ...
+Set-VirtualDisk                   Function  Storage                   ...
+Set-FileShare                     Function  Storage                   ...
+Set-VolumeScrubPolicy             Function  Storage                   ...
+Set-InitiatorPort                 Function  Storage                   ...
+Set-FileIntegrity                 Function  Storage                   ...
+Set-Partition                     Function  Storage                   ...
+Set-StorageProvider               Function  Storage                   ...
+Set-StorageSetting                Function  Storage                   ...
+Set-Volume                        Function  Storage                   ...
+Set-Disk                          Function  Storage                   ...
+Set-FileStorageTier               Function  Storage                   ...
+Set-StorageTier                   Function  Storage                   ...
+Set-TpmOwnerAuth                  Cmdlet    TrustedPlatformModule     Set-TpmOwnerAuth...
+Set-UevConfiguration              Cmdlet    UEV                       Set-UevConfiguration...
+Set-UevTemplateProfile            Cmdlet    UEV                       Set-UevTemplateProfile...
+Set-VpnConnection                 Function  VpnClient                 ...
+Set-VpnConnectionTriggerDnsCon... Function  VpnClient                 ...
+Set-VpnConnectionTriggerTruste... Function  VpnClient                 ...
+Set-VpnConnectionIPsecConfigur... Function  VpnClient                 ...
+Set-VpnConnectionProxy            Function  VpnClient                 ...
+Set-OdbcDsn                       Function  Wdac                      ...
+Set-OdbcDriver                    Function  Wdac                      ...
+Set-WindowsSearchSetting          Cmdlet    WindowsSearch             Set-WindowsSearchSetting...
+
+
+PS C:\WINDOWS\system32> stop-transcript
+**********************
+Windows PowerShell transcript end
+End time: 20180606195410
+**********************
